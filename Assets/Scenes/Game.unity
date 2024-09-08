@@ -1405,7 +1405,7 @@ GameObject:
   - component: {fileID: 1158226332}
   - component: {fileID: 1158226333}
   m_Layer: 0
-  m_Name: HeroManager
+  m_Name: BuildingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2021,7 +2021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700626651}
   m_Layer: 0
-  m_Name: Heroes
+  m_Name: Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
