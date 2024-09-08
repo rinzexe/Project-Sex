@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour
+public class Building : Object
 {
     public float detectionRange;
     public float coldResistance;
@@ -12,11 +12,17 @@ public class Building : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        targets.Add(collision.gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            targets.Add(collision.gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        targets.Remove(collision.gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            targets.Remove(collision.gameObject);
+        }
     }
 }

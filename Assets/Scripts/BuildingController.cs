@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildingController : Building
 {
     GameObject target;
+    public GameObject bullet;
 
     private void Start()
     {
@@ -14,6 +15,12 @@ public class BuildingController : Building
     void Fire()
     {
         GetClosestTarget();
+
+        if (target != null)
+        {
+            Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(transform.position.y - target.transform.position.y, transform.position.x - target.transform.position.x) * Mathf.Rad2Deg + 90);
+            Instantiate(bullet, transform.position, rotation);
+        }
     }
 
     void GetClosestTarget()

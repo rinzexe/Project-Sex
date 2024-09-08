@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            HeroManager.SpawnHero(heroToPlace, new Vector3(mousePos.x, mousePos.y));
+            HeroManager.SpawnHero(heroToPlace, new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y)));
         }
     }
 }
